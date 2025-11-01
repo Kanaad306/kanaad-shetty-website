@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lessons from Deploying ML in Production - Kanaad Shetty</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-content">
+          <h1><a href="index.html" class="home-link">Kanaad Shetty</a></h1>
+        </div>
+      </header>
+
+      <main>
+        <a href="blogs.html" class="back-link">Back to Blog</a>
+
+        <article class="blog-post-header">
+          <h1 class="blog-post-title">
+            Lessons from Deploying ML in Production
+          </h1>
+          <p class="blog-post-meta">November 12, 2024 • 7 min read</p>
+        </article>
+
+        <img
+          src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop"
+          alt="Project Management"
+          class="blog-post-image"
+        />
+
+        <div class="blog-content">
+          <p>
+            There's a massive gap between "the model works in my notebook" and
+            "the model works for real users in production." Here are the hard
+            lessons I've learned bridging that gap.
+          </p>
+
+          <h3>Lesson 1: Your Training Data Lies</h3>
+          <p>
+            Your carefully curated training dataset is nothing like real-world
+            data. Real data is messier, noisier, and full of edge cases you
+            never imagined. That 95% accuracy in your notebook? Expect it to drop
+            when real users start throwing weird inputs at your system.
+          </p>
+
+          <p>
+            Solution: Build extensive input validation. Log everything. Monitor
+            for data drift. And most importantly, make it easy to collect
+            feedback on predictions so you can continuously improve your model
+            with real data.
+          </p>
+
+          <h3>Lesson 2: Latency Kills Adoption</h3>
+          <p>
+            I've seen great models fail because they were too slow. Users will
+            tolerate some imperfection in predictions, but they won't tolerate
+            waiting 30 seconds for a result. If your model is slow, people will
+            just go back to doing things manually.
+          </p>
+
+          <p>
+            We had to completely rearchitect one of our systems, moving from
+            real-time inference to batch predictions for non-urgent cases. For
+            urgent cases, we used a faster (slightly less accurate) model.
+            Users preferred the speed.
+          </p>
+
+          <h3>Lesson 3: Monitoring is Not Optional</h3>
+          <p>
+            Models degrade over time. Data distributions shift. What worked last
+            month might not work today. You need monitoring that goes beyond
+            "is the service up?"
+          </p>
+
+          <p>Track things like:</p>
+
+          <p>
+            • Prediction confidence scores over time<br />
+            • Input data distribution changes<br />
+            • Model prediction patterns (are you suddenly predicting "other" way
+            more often?)<br />
+            • User feedback and correction rates<br />
+            • Business metrics (the actual impact, not just model metrics)
+          </p>
+
+          <h3>Lesson 4: Build for Failure</h3>
+          <p>
+            Your ML service will fail. The model will crash. The API will timeout.
+            The upstream data source will go down. Plan for it.
+          </p>
+
+          <p>
+            We learned to always have fallbacks: rule-based systems, cached
+            predictions, manual override options. Your ML model should enhance
+            your product, not be a single point of failure.
+          </p>
+
+          <h3>Lesson 5: Version Everything</h3>
+          <p>
+            Model versions, data versions, code versions, even training
+            configurations. When something goes wrong (and it will), you need to
+            know exactly what was running, what data it was trained on, and how
+            to reproduce or rollback.
+          </p>
+
+          <p>
+            We use MLflow for experiment tracking and model versioning. It's not
+            perfect, but it's better than the chaos we had before.
+          </p>
+
+          <h3>Lesson 6: The Human Element Matters Most</h3>
+          <p>
+            The best technical solution means nothing if people don't trust it or
+            understand how to use it. We spent as much time on user education,
+            clear error messages, and transparency about model limitations as we
+            did on the model itself.
+          </p>
+
+          <p>
+            Show confidence scores. Explain predictions when possible. Make it
+            easy to report issues. Build trust gradually by starting with
+            low-stakes predictions before tackling critical decisions.
+          </p>
+
+          <h3>The Bottom Line</h3>
+          <p>
+            Production ML is 20% model development and 80% everything else:
+            data pipelines, monitoring, error handling, user experience,
+            operational concerns. The sooner you accept that, the better your
+            production systems will be.
+          </p>
+
+          <p>
+            Focus on building robust, maintainable systems that solve real
+            problems reliably. The fanciest model in the world is useless if it
+            can't run in production.
+          </p>
+        </div>
+      </main>
+
+      <footer>
+        <p>&copy; 2025 Kanaad Shetty</p>
+      </footer>
+    </div>
+  </body>
+</html>
