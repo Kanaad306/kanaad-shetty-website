@@ -600,6 +600,52 @@ footer {
   font-weight: bold;
 }
 
+.contact-info-container {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.contact-item {
+  background-color: #ffffff;
+  border: 1px solid #e0e0dd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.contact-item:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  border-color: #d0d0cd;
+  transform: translateY(-3px);
+}
+
+.contact-label {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #787670;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.contact-link {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1.05rem;
+  color: #1f1f1d;
+  border-bottom: 1px solid #d9d9d6;
+  transition: all 0.2s ease;
+  word-break: break-all;
+}
+
+.contact-link:hover {
+  color: #3a3a38;
+  border-bottom-color: #1f1f1d;
+}
+
 @media (max-width: 640px) {
   body {
     font-size: 17px;
@@ -713,5 +759,17 @@ footer {
 
   .achievement-list li {
     font-size: 0.95rem;
+  }
+
+  .contact-item {
+    padding: 1.25rem;
+  }
+
+  .contact-label {
+    font-size: 0.85rem;
+  }
+
+  .contact-link {
+    font-size: 1rem;
   }
 }
