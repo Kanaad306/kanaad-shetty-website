@@ -18,6 +18,10 @@ body {
   margin: 0 auto;
 }
 
+.resume-container {
+  max-width: 1040px;
+}
+
 header {
   margin-bottom: 1.5rem;
   padding-bottom: 1.5rem;
@@ -331,6 +335,250 @@ footer {
   content: "← ";
 }
 
+/* Resume Styles */
+.resume-header-section {
+  background: linear-gradient(135deg, #f8f8f7 0%, #fafaf9 100%);
+  border: 1px solid #e0e0dd;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.resume-title-block {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #d9d9d6;
+}
+
+.resume-name {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1f1f1d;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.resume-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1.15rem;
+  color: #787670;
+  font-weight: 500;
+  margin: 0;
+}
+
+.resume-summary p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #3a3a38;
+  margin: 0;
+}
+
+.resume-section {
+  margin-bottom: 3rem;
+}
+
+.resume-section-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f1f1d;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e0e0dd;
+  letter-spacing: -0.01em;
+}
+
+.experience-duration {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.95rem;
+  color: #787670;
+  font-style: italic;
+  margin-bottom: 2rem;
+  display: inline-block;
+  background-color: #f0f0ee;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.experience-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0dd;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: #d0d0cd;
+  transform: translateY(-2px);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f0ee;
+  gap: 1rem;
+}
+
+.experience-title-group h3 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1f1f1d;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.3;
+}
+
+.company-name {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1.05rem;
+  color: #787670;
+  margin: 0;
+  font-weight: 500;
+}
+
+.experience-date {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+  color: #787670;
+  background-color: #f0f0ee;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.experience-role {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3a3a38;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.role-section {
+  margin-top: 1.5rem;
+}
+
+.role-section:first-child {
+  margin-top: 0;
+}
+
+.experience-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.experience-list li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+  color: #3a3a38;
+}
+
+.experience-list li:before {
+  content: "▸";
+  position: absolute;
+  left: 0.25rem;
+  color: #787670;
+  font-weight: bold;
+}
+
+.education-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.education-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0dd;
+  border-radius: 8px;
+  padding: 1.75rem;
+  transition: all 0.3s ease;
+}
+
+.education-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: #d0d0cd;
+  transform: translateY(-2px);
+}
+
+.education-card h3 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f1f1d;
+  margin: 0 0 0.75rem 0;
+}
+
+.education-school {
+  font-size: 1rem;
+  color: #3a3a38;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.6;
+}
+
+.education-years {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+  color: #787670;
+  margin: 0;
+  font-weight: 500;
+}
+
+.achievements-container {
+  display: grid;
+  gap: 2rem;
+}
+
+.achievement-block {
+  background-color: #ffffff;
+  border: 1px solid #e0e0dd;
+  border-radius: 8px;
+  padding: 1.75rem;
+}
+
+.achievement-subtitle {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1f1f1d;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #f0f0ee;
+}
+
+.achievement-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.achievement-list li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+  color: #3a3a38;
+}
+
+.achievement-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0.25rem;
+  color: #787670;
+  font-weight: bold;
+}
+
 @media (max-width: 640px) {
   body {
     font-size: 17px;
@@ -387,5 +635,44 @@ footer {
 
   .blog-content h3 {
     font-size: 1.3rem;
+  }
+
+  /* Resume responsive styles */
+  .resume-header-section {
+    padding: 1.5rem;
+  }
+
+  .resume-name {
+    font-size: 1.75rem;
+  }
+
+  .resume-title {
+    font-size: 1rem;
+  }
+
+  .resume-section-title {
+    font-size: 1.4rem;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experience-date {
+    align-self: flex-start;
+  }
+
+  .experience-title-group h3 {
+    font-size: 1.2rem;
+  }
+
+  .experience-card {
+    padding: 1.5rem;
+  }
+
+  .education-card,
+  .achievement-block {
+    padding: 1.25rem;
   }
 }
