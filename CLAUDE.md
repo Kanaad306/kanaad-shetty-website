@@ -12,11 +12,12 @@ Static personal website for Kanaad Shetty, featuring a portfolio/about page and 
 - `index.html` - Main landing page with profile, about, skills, and contact sections
 - `blogs.html` - Blog listing page with card grid layout
 - `blog-post-[1-3].html` - Individual blog post pages
-- `styles.css` - Single CSS file containing all styles (general, blog grid, and blog post styles)
+- `resume.html` - Detailed resume/CV page with work experience, education, and achievements
+- `styles.css` - Single CSS file containing all styles (general, blog grid, blog post, and resume styles)
 - `profile.jpeg` - Profile image used in header
 
 ### Navigation System
-Two-page navigation (`index.html` ↔ `blogs.html`) with active state styling via `.nav-link.active` class. Blog posts link back to `blogs.html`.
+Three-page navigation (`index.html` ↔ `blogs.html` ↔ `resume.html`) with active state styling via `.nav-link.active` class. Blog posts link back to `blogs.html`.
 
 ### Styling Architecture
 All styles in `styles.css` organized in sections:
@@ -25,13 +26,14 @@ All styles in `styles.css` organized in sections:
 3. Typography (h1, h2, p, etc.)
 4. Component styles (badges, lists, footer)
 5. Blog-specific styles (grid, cards, post layout)
-6. Responsive styles (@media queries)
+6. Resume-specific styles (experience cards, education grid, achievements)
+7. Responsive styles (@media queries)
 
 **Design System:**
 - Typography: Georgia serif for body, -apple-system sans-serif for headings/UI
 - Color scheme: Neutral palette (#1f1f1d text, #fafaf9 background, #787670 muted)
-- Max width: 620px centered container
-- Spacing: Consistent use of 1rem, 1.5rem, 2rem increments
+- Max width: 620px centered container (1040px for resume page)
+- Spacing: Consistent use of 0.5rem, 0.75rem, 1rem, 1.5rem, 2rem increments
 
 ## Development Workflow
 
@@ -61,6 +63,16 @@ python3 -m http.server 8000
 
 ### Content Updates
 - Profile image: Replace `profile.jpeg` (maintain 1:1 aspect ratio)
-- Contact links: Update in `index.html` lines 89-114
-- Skills badges: Modify `.badge-container` in `index.html` lines 73-84
+- Contact links: Update in `index.html` and `resume.html` footer sections
+- Skills badges: Modify `.badge-container` in `index.html` and `resume.html`
 - About/bio sections: Edit corresponding `<section>` blocks in `index.html`
+- Resume experience: Update `.experience-card` entries in `resume.html`
+- Resume education: Modify `.education-card` entries in `resume.html`
+
+### Resume Page Structure
+The resume page uses specialized components:
+- `.resume-header-section` - Header with name, title, and summary (gradient background)
+- `.experience-card` - Individual job entries with company, role, dates, and bullet points
+- `.education-grid` - Grid layout for education entries
+- `.achievements-container` - Achievements and certifications sections
+- Resume container has wider max-width (1040px vs 620px for other pages)
