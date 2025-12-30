@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VL-JEPA: When AI Stops Predicting Words and Starts Predicting Meaning - Kanaad Shetty</title>
+    <link rel="canonical" href="https://kanaadshetty.com/vl-jepa-predicting-meaning.html" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-content">
+          <h1><a href="index.html" class="home-link">Kanaad Shetty</a></h1>
+        </div>
+      </header>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="blogs.html" class="nav-link">Blog</a>
+        <a href="resume.html" class="nav-link">Resume</a>
+      </nav>
+
+      <main>
+        <a href="blogs.html" class="back-link">Back to Blog</a>
+
+        <article class="blog-post-header">
+          <h1 class="blog-post-title">VL-JEPA: When AI Stops Predicting Words and Starts Predicting Meaning</h1>
+          <p class="blog-post-meta">December 30, 2025 • 6 min read</p>
+        </article>
+
+        <img
+          src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=600&fit=crop"
+          alt="AI and Machine Learning Neural Networks"
+          class="blog-post-image"
+        />
+
+        <div class="blog-content">
+          <p>
+            Most of today's AI feels smart because it can talk. LLMs are built to predict the next token, so their thinking is inseparable from generating words. You only find out what the model is telling as it produces the answer token by token, often with extra verbosity, extra latency, and extra compute.
+          </p>
+
+          <p>
+            Yann LeCun's new paper on VL-JEPA (Vision-Language Joint Embedding Predictive Architecture) points in a very different direction. The central idea is simple but disruptive: Instead of generating text to arrive at meaning, VL-JEPA predicts meaning directly. It is a non-generative model at its core—its default mode is not to write the next word, rather to predict the semantic representation of what's going on.
+          </p>
+
+          <p>
+            This matters because token-based systems are forced to operate in token space, which makes them heavily sensitive to surface-level language details: wording, phrasing, grammar, and style. That's not the same thing as understanding. In real life, intelligence is the ability to understand the world, not the ability to narrate it endlessly. LeCun has been consistent on this point: language is not intelligence, it's an interface. VL-JEPA pushes that philosophy into architecture.
+          </p>
+
+          <p>
+            So what does VL-JEPA actually do? Instead of training a model to produce an output sentence token-by-token, it trains the model to predict a meaning vector (an embedding) in a continuous semantic space. Think of it as the model learning to predict "what this means" rather than "what words should come next." Language becomes optional—something you ask for when you want an explanation rather than the only way the model can think.
+          </p>
+
+          <p>
+            This is especially powerful for agents and robotics, because the world is not made of tokens. The world is continuous, dynamic, and temporal. Traditional vision systems often behave like low-cost labelers: frame comes in, label goes out, and the labels can be jumpy and inconsistent because the system lacks a stable internal state. VL-JEPA is closer to a model that tracks the event in continuous meaning space, building confidence as it observes more context, and only "labeling" (or speaking) when it has enough certainty. In other words, it can hold a silent semantic state—something token-based models aren't naturally designed to do because they keep generating.
+          </p>
+
+          <p>
+            That "silent state" is a big deal. Token models have to keep talking to keep going, which is expensive and sometimes unreliable. VL-JEPA flips it: it can keep understanding without constantly producing language. You can imagine an agent that watches, understands, and updates its internal world model continuously, and then speaks only when there's a decision to communicate, a question to answer, or a threshold of confidence reached.
+          </p>
+
+          <p>
+            If this direction continues, it may be one of the biggest shifts in how we think about AI systems. We've been treating language generation as proof of understanding, but VL-JEPA argues the opposite: understanding should exist independently of language. Words are optional. Meaning is not. And that reframes the future: less "AI that talks," and more "AI that understands," with language as a layer you turn on when you actually need it.
+          </p>
+        </div>
+      </main>
+
+      <footer>
+        <p>&copy; 2025 Kanaad Shetty</p>
+      </footer>
+    </div>
+  </body>
+</html>
+
