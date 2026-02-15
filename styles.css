@@ -246,6 +246,20 @@ footer {
   background-color: #f0f0ee;
 }
 
+.blog-image-container--compact {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-image-container--compact .blog-image {
+  width: auto;
+  max-width: 160px;
+  max-height: 80px;
+  object-fit: contain;
+}
+
 .blog-image {
   width: 100%;
   height: 100%;
@@ -307,6 +321,13 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 8px;
+}
+
+.blog-post-image--compact {
+  max-width: 280px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   margin: 2rem 0;
 }
 
@@ -322,6 +343,14 @@ footer {
   margin-bottom: 1.5rem;
   font-size: 1.05rem;
   line-height: 1.8;
+}
+
+.blog-content code {
+  font-family: ui-monospace, monospace;
+  font-size: 0.9em;
+  background-color: #f0f0ee;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
 }
 
 .back-link {
@@ -388,6 +417,17 @@ footer {
   padding-bottom: 0.75rem;
   border-bottom: 2px solid #e0e0dd;
   letter-spacing: -0.01em;
+}
+
+.resume-competency-line {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #1f1f1d;
+  margin-bottom: 0.75rem;
+}
+
+.resume-competency-line:last-child {
+  margin-bottom: 0;
 }
 
 .experience-duration {

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Weekend Testing CrewAI: What I Learned Building Multi-Agent Systems - Kanaad Shetty</title>
+    <link rel="canonical" href="https://kanaadshetty.com/crewai-multi-agent-systems.html" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-content">
+          <h1><a href="index.html" class="home-link">Kanaad Shetty</a></h1>
+        </div>
+      </header>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="blogs.html" class="nav-link">Blog</a>
+        <a href="resume.html" class="nav-link">Resume</a>
+      </nav>
+
+      <main>
+        <a href="blogs.html" class="back-link">Back to Blog</a>
+
+        <article class="blog-post-header">
+          <h1 class="blog-post-title">My Weekend Testing CrewAI: What I Learned Building Multi-Agent Systems</h1>
+          <p class="blog-post-meta">February 15, 2026 • 8 min read</p>
+        </article>
+
+        <img
+          src="assets/crewai-logo.png"
+          alt="CrewAI Logo"
+          class="blog-post-image blog-post-image--compact"
+        />
+
+        <div class="blog-content">
+          <p>
+            I like testing out tools and frameworks, spent this past weekend diving into CrewAI. I made some fascinating discoveries about multi-agent AI systems.
+          </p>
+
+          <h3>Why I Started This Experiment</h3>
+          <p>
+            I was curious about multi-agent orchestration. CrewAI kept popping up on this topic. To start off we use YAML files to define tasks and agents. One thing that immediately stood out was how straightforward it is to define agents and tasks. Instead of hard-coding everything in Python, you can define your agents' roles, goals, and backstories in simple <code>agents.yaml</code> and <code>tasks.yaml</code> files.
+          </p>
+          <p>
+            Here's what makes this powerful: when you want to adjust an agent's behavior or modify a task, you're editing a clean configuration file rather than digging through code. For someone who works as a Business Analyst, this separation of concerns feels natural, it's like separating your business requirements from your technical implementation.
+          </p>
+          <p>
+            I set up a small crew with an architect, backend engineer, frontend engineer, and a tester. Each agent had its own persona and specific responsibilities. Did it produce perfect code? Absolutely not. But the ability to iterate, retry, and refine through multiple passes was genuinely interesting.
+          </p>
+
+          <h3>What Actually Works (And What Doesn't)</h3>
+          <p>
+            Let me be transparent: these systems aren't perfect. When I've used tools like Claude Code for some projects, I've encountered plenty of mistakes and unnecessarily convoluted solutions. Multi-agent systems have similar limitations they can hallucinate, take inefficient paths, and produce code that needs human review.
+          </p>
+          <p>
+            But here's what's compelling: the iterative nature of the system. You can have agents retry tasks, validate each other's work, and progressively refine outputs. It's not about getting perfect results on the first try it's about building systems that can improve through iteration.
+          </p>
+
+          <h3>Beyond Code: Where CrewAI Really Shines</h3>
+          <p>
+            While I started by testing code generation, I realized the framework's real potential lies elsewhere. As a Business Analyst working on project timelines and task structuring, I see clear applications in my own field:
+          </p>
+
+          <p>
+            <strong>Business Analysis and Documentation</strong><br />
+            Creating initial business requirement documents or high-level architecture designs could be automated as a starting point. CrewAI agents can handle tasks like market research, analysis, and quality reviews. You're not getting a final deliverable, but you're getting a solid first draft that humans can refine.
+          </p>
+
+          <p>
+            <strong>Marketing and Content Strategy</strong><br />
+            This is where multi-agent systems really excel. Marketing teams can use CrewAI agents for tasks like market research, copywriting, and quality reviews, with automation tying these agents to content management systems and social media platforms. You can have different agents handle research, copywriting, SEO optimization, and final review all collaborating toward a cohesive strategy.
+          </p>
+
+          <p>
+            <strong>Financial Analysis</strong><br />
+            Finance departments can deploy CrewAI agents for analysis and reporting. Yes, there's the hallucination risk LLMs can make up data if you're not careful. But for data visualization, pattern recognition, and preliminary analysis of existing datasets, these systems can be remarkably helpful.
+          </p>
+
+          <h3>Building Your Own System: It's More Accessible Than You Think</h3>
+          <p>
+            You don't need to be a senior engineer to experiment with this. If you're comfortable with basic Python and want to test these concepts, you can:
+          </p>
+          <ul>
+            <li>Use CrewAI's command-line interface to scaffold a new project with a structured foundation</li>
+            <li>Define your agents in YAML files with clear roles and goals</li>
+            <li>Build a simple frontend with something like Radio</li>
+            <li>Run your tasks and iterate on the results</li>
+          </ul>
+          <p>
+            The framework works with multiple LLM providers including OpenAI, Anthropic, Google, and local models through Ollama, so you have flexibility in choosing your underlying model.
+          </p>
+
+          <h3>The Reality Check</h3>
+          <p>
+            The framework is evolving rapidly, but production deployment requires consideration of monitoring, error handling, and cost management.
+          </p>
+          <p>
+            The key insight: this isn't about replacing human expertise it's about augmenting it. It's about automating the repetitive, time-consuming parts of knowledge work so people can focus on higher-level thinking, creativity, and judgment.
+          </p>
+
+          <h3>My Takeaway</h3>
+          <p>
+            After a weekend of experimenting, I'm convinced that multi-agent systems like CrewAI represent a meaningful shift in how we approach complex workflows. The technology isn't mature enough to fully automate expert-level work, but it's absolutely ready for:
+          </p>
+          <ul>
+            <li>Initial ideation and brainstorming</li>
+            <li>First-draft generation of documents and strategies</li>
+            <li>Data analysis and visualization workflows</li>
+            <li>Structured research and information gathering</li>
+            <li>Iterative refinement of creative outputs</li>
+          </ul>
+          <p>
+            For anyone curious about AI's practical applications whether you're a developer, business analyst, marketer, or just someone interested in emerging technology. I'd recommend spending some time with these frameworks. The learning curve isn't as steep as you might think, and the insights you gain about both the capabilities and limitations of AI systems are invaluable.
+          </p>
+        </div>
+      </main>
+
+      <footer>
+        <p>&copy; 2026 Kanaad Shetty</p>
+      </footer>
+    </div>
+  </body>
+</html>
